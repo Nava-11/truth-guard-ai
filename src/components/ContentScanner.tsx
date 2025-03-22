@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { scanContent } from '@/lib/scannerUtils';
@@ -53,6 +52,7 @@ const ContentScanner: React.FC<ContentScannerProps> = ({ className }) => {
     try {
       // Simulate API call with our utility function
       const result = await scanContent(content);
+      console.log('Scan result:', result); // Debug log
       setScanResult(result);
 
       // Add to recent scans
